@@ -33,36 +33,44 @@
         .overview-container {
             margin-bottom: 30px;
         }
-        .overview-gif {
+        .overview-top {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            gap: 20px;
             margin-bottom: 15px;
+            align-items: center;
+        }
+        .overview-text-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .overview-gif {
+            flex: 0 0 auto;
         }
         .overview-gif img {
             max-width: 600px;
             width: 100%;
             height: auto;
         }
-        .overview-text {
-            padding: 0 0px;
-        }
         .dataset-container {
             margin-bottom: 30px;
         }
-        .dataset-image {
+        .dataset-top {
             display: flex;
-            justify-content: center;
-            align-items: center;
+            gap: 20px;
             margin-bottom: 15px;
+            align-items: center;
         }
-        .dataset-image img {
+        .dataset-text-left {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .dataset-img {
+            flex: 0 0 auto;
+        }
+        .dataset-img img {
             max-width: 600px;
             width: 100%;
             height: auto;
-        }
-        .dataset-text {
-            padding: 0 0px;
         }
     </style>
 </head>
@@ -77,35 +85,39 @@
     <hr>
     <div class="overview-container">
         <h3>Overview</h3>
-        <div class="overview-text">
-            <em><p>As part of my MSc in ACSE at Imperial College London, I undertook a research project
-                to develop a foundational deep learning surrogate model for wildfire spread.
-                The model was based on the SCALED model developed by Yueyan Li at Imperial College London, a UNet-backed DDIM diffusion model.
-                Following the methodology of <a href="https://link.springer.com/article/10.1007/s10694-023-01469-6" style="color:aquamarine">Burge et al. (2023)</a>,
-                data was generated using the empirical fire spread model, <a href="https://elmfire.io/" style="color:aquamarine">ELMFIRE</a>.
-                <br><br>
-                The model was trained to predict the next state of the wildfire spread given environmental conditions.
-                The visualization above shows a GIF comparing the predicted wildfire spread with the ground truth through 12 hours of autoregressive rollout,
-                at each step using the model's previous prediction as input for the next prediction.
+        <div class="overview-top">
+            <div class="overview-text-left">
+                <em><p>As part of my MSc in ACSE at Imperial College London, I undertook a research project
+                    to develop a foundational deep learning surrogate model for wildfire spread.
+                    The model was based on the SCALED model developed by Yueyan Li at Imperial College London, a UNet-backed DDIM diffusion model.
+                    Following the methodology of <a href="https://link.springer.com/article/10.1007/s10694-023-01469-6" style="color:aquamarine">Burge et al. (2023)</a>,
+                    data was generated using the empirical fire spread model, <a href="https://elmfire.io/" style="color:aquamarine">ELMFIRE</a>.
+                    <br><br>
+                    The model was trained to predict the next state of the wildfire spread given environmental conditions.
+                    The visualization above shows a GIF comparing the predicted wildfire spread with the ground truth through 12 hours of autoregressive rollout,
+                    at each step using the model's previous prediction as input for the next prediction.
             </p></em>
-        </div>
-        <div class="overview-gif">
-            <img src="./images/gif-case-37-loop.gif" alt="Wildfire Simulation GIF">
+            </div>
+            <div class="overview-gif">
+                <img src="./images/gif-case-37-loop.gif" alt="Wildfire Simulation GIF">
+            </div>
         </div>
     </div>
     <hr>
     <div class="dataset-container">
         <h3>Region of Interest</h3>
-        <div class="dataset-text">
-            <em><p>10,000 ELMFIRE simulations were generated with real-world fuel model data
-                for the purposes of training and evaluating the model's ability to generalize to unseen fuels and topography.
-                The training set was generated from a region spanning parts of eastern California and western Nevada, USA,
-                while the test set was generated from a region of western and northern California.
-                Work is ongoing to publish the datasets used for this project to a public repository for further use.
-            </p></em>
-        </div>
-        <div class="dataset-image">
-            <img src="./images/SCALED-Fire_03DataZone.png" alt="Ignition Areas for Real-World Fuel Model Dataset">
+        <div class="dataset-top">
+            <div class="dataset-text-left">
+                <em><p>10,000 ELMFIRE simulations were generated with real-world fuel model data
+                    for the purposes of training and evaluating the model's ability to generalize to unseen fuels and topography.
+                    The training set was generated from a region spanning parts of eastern California and western Nevada, USA,
+                    while the test set was generated from a region of western and northern California.
+                    Work is ongoing to publish the datasets used for this project to a public repository for further use.
+                </p></em>
+            </div>
+            <div class="dataset-img">
+                <img src="./images/SCALED-Fire_03DataZone.png" alt="Ignition Areas for Real-World Fuel Model Dataset">
+            </div>
         </div>
     </div>
     <hr>
