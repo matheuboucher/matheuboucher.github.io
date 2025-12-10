@@ -64,13 +64,35 @@
             flex: 1;
             padding-right: 20px;
         }
-        .dataset-img {
+        .dataset-image {
             flex: 0 0 auto;
         }
-        .dataset-img img {
+        .dataset-image img {
             max-width: 600px;
             width: 100%;
             height: auto;
+        }
+        @media (max-width: 1050px) {
+            .overview-top {
+                flex-direction: column;
+            }
+            .overview-text-left {
+                padding-right: 0;
+                margin-bottom: 15px;
+            }
+            .overview-gif img {
+                max-width: 100%;
+            }
+            .dataset-top {
+                flex-direction: column;
+            }
+            .dataset-text-left {
+                padding-right: 0;
+                margin-bottom: 15px;
+            }
+            .dataset-image img {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -96,7 +118,7 @@
                     The model was trained to predict the next state of the wildfire spread given environmental conditions.
                     The visualization above shows a GIF comparing the predicted wildfire spread with the ground truth through 12 hours of autoregressive rollout,
                     at each step using the model's previous prediction as input for the next prediction.
-            </p></em>
+                </p></em>
             </div>
             <div class="overview-gif">
                 <img src="./images/gif-case-37-loop.gif" alt="Wildfire Simulation GIF">
@@ -112,10 +134,11 @@
                     for the purposes of training and evaluating the model's ability to generalize to unseen fuels and topography.
                     The training set was generated from a region spanning parts of eastern California and western Nevada, USA,
                     while the test set was generated from a region of western and northern California.
+                    <br><br>
                     Work is ongoing to publish the datasets used for this project to a public repository for further use.
                 </p></em>
             </div>
-            <div class="dataset-img">
+            <div class="dataset-image">
                 <img src="./images/SCALED-Fire_03DataZone.png" alt="Ignition Areas for Real-World Fuel Model Dataset">
             </div>
         </div>
