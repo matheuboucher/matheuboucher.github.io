@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matheu Boucher - Wildfire Project</title>
+    <style>
+        body {
+            background-color:black;
+            margin: 0 10%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+        }
+        h2 {
+            color: lightgoldenrodyellow;
+            font-weight: bold;
+        }
+        h3 {
+            color: lightgoldenrodyellow;
+            font-weight: bold;
+        }
+        p {
+            color: white;
+        }
+        em {
+            color: white;
+        }
+        header {
+            color: white;
+            text-align: right;
+        }
+        .overview-container {
+            margin-bottom: 30px;
+        }
+        .overview-gif {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .overview-gif img {
+            max-width: 100%;
+            height: auto;
+        }
+        .overview-text {
+            padding: 0 0px;
+        }
+        .dataset-container {
+            margin-bottom: 30px;
+        }
+        .dataset-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .dataset-image img {
+            max-width: 100%;
+            height: auto;
+        }
+        .dataset-text {
+            padding: 0 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p><a href="./index.html" style="color:aquamarine">
+            Home</a> |
+            <a href="./wildfire.html" style="color:aquamarine">Wildfires</a> |
+            <a href="./contact.html" style="color:aquamarine">Contact Info</a></p>
+    </header>
+    <h2>Wildfire Surrogate Modeling</h2>
+    <hr>
+    <div class="overview-container">
+        <h3>Overview</h3>
+        <div class="overview-gif">
+            <img src="./images/gif-case-37-loop.gif" alt="Wildfire Simulation GIF">
+        </div>
+        <div class="overview-text">
+            <em><p>As part of my MSc in ACSE at Imperial College London, I undertook a research project
+                to develop a foundational deep learning surrogate model for wildfire spread.
+                The model was based on the SCALED model developed by Yueyan Li at Imperial College London, a UNet-backed DDIM diffusion model.
+                Following the methodology of <a href="https://link.springer.com/article/10.1007/s10694-023-01469-6" style="color:aquamarine">Burge et al. (2023)</a>,
+                data was generated using the empirical fire spread model, <a href="https://elmfire.io/" style="color:aquamarine">ELMFIRE</a>.
+                <br><br>
+                The model was trained to predict the next state of the wildfire spread given environmental conditions.
+                The visualization above shows a GIF comparing the predicted wildfire spread with the ground truth through 12 hours of autoregressive rollout,
+                at each step using the model's previous prediction as input for the next prediction.
+            </p></em>
+        </div>
+    </div>
+    <hr>
+    <div class="dataset-container">
+        <h3>Region of Interest</h3>
+        <div class="dataset-image">
+            <img src="./images/SCALED-Fire_03DataZone.png" alt="Ignition Areas for Real-World Fuel Model Dataset">
+        </div>
+        <div class="dataset-text">
+            <em><p>10,000 ELMFIRE simulations were generated with real-world fuel model data
+                for the purposes of training and evaluating the model's ability to generalize to unseen fuels and topography.
+                The training set was generated from a region spanning parts of eastern California and western Nevada, USA,
+                while the test set was generated from a region of western and northern California.
+                Work is ongoing to publish the datasets used for this project to a public repository for further use.
+            </p></em>
+        </div>
+    </div>
+    <hr>
+    <h3>Future Work</h3>
+    <em><p>Work is ongoing to improve the model's accuracy and robustness, including
+        generating more comprehensive datasets and refining the loss function.</p></em>
+    <br><br>
+</body>
+</html>
