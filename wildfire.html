@@ -40,7 +40,8 @@
             margin-bottom: 15px;
         }
         .overview-gif img {
-            max-width: 100%;
+            max-width: 600px;
+            width: 100%;
             height: auto;
         }
         .overview-text {
@@ -56,7 +57,8 @@
             margin-bottom: 15px;
         }
         .dataset-image img {
-            max-width: 100%;
+            max-width: 600px;
+            width: 100%;
             height: auto;
         }
         .dataset-text {
@@ -75,9 +77,6 @@
     <hr>
     <div class="overview-container">
         <h3>Overview</h3>
-        <div class="overview-gif">
-            <img src="./images/gif-case-37-loop.gif" alt="Wildfire Simulation GIF">
-        </div>
         <div class="overview-text">
             <em><p>As part of my MSc in ACSE at Imperial College London, I undertook a research project
                 to develop a foundational deep learning surrogate model for wildfire spread.
@@ -89,6 +88,9 @@
                 The visualization above shows a GIF comparing the predicted wildfire spread with the ground truth through 12 hours of autoregressive rollout,
                 at each step using the model's previous prediction as input for the next prediction.
             </p></em>
+        </div>
+        <div class="overview-gif">
+            <img src="./images/gif-case-37-loop.gif" alt="Wildfire Simulation GIF">
         </div>
     </div>
     <hr>
