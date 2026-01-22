@@ -43,10 +43,10 @@
             flex: 1;
             padding-right: 20px;
         }
-        .overview-gif {
+        .overview-img {
             flex: 0 0 auto;
         }
-        .overview-gif img {
+        .overview-img img {
             max-width: 600px;
             width: 100%;
             height: auto;
@@ -114,12 +114,13 @@
                     Following the methodology of <a href="https://link.springer.com/article/10.1007/s10694-023-01469-6" style="color:aquamarine">Burge et al. (2023)</a>,
                     data was generated using <a href="https://elmfire.io/" style="color:aquamarine">ELMFIRE</a>.
                     <br><br>
-                    This gif shows a comparison between the model's prediction of the wildfire spread and the ground truth over 12 hours of autoregressive rollout,
-                    at each step using the model's previous prediction as input for the next prediction.
+                    This visualization compares the model's prediction of the wildfire spread and the ground truth over 12 hours of autoregressive rollout,
+                    at each step using the model's previous prediction as input for the next prediction. The first row shows the ground truth from ELMFIRE,
+                    while the second row shows the model's prediction for time of arrival of the fire front, spread rate, flame length, and burn scar.
                 </p></em>
             </div>
-            <div class="overview-gif">
-                <img src="./images/gif-case-37-loop.gif" alt="Wildfire Simulation GIF">
+            <div class="overview-img">
+                <img src="./images/Site_Fire1.png" alt="Wildfire Simulation Result">
             </div>
         </div>
     </div>
@@ -137,14 +138,14 @@
                 </p></em>
             </div>
             <div class="dataset-image">
-                <img src="./images/SCALED-Fire_03DataZone.png" alt="Ignition Areas for Real-World Fuel Model Dataset">
+                <img src="./images/Paper_Site_locs.png" alt="Ignition Areas for Real-World Fuel Model Dataset">
             </div>
         </div>
     </div>
     <hr>
     <h3>Future Work</h3>
     <em><p>Future work includes
-        generating further test datasets and refining the model.</p></em>
+        generating more diverse datasets and refining the model.</p></em>
     <br><br>
 </body>
 </html>
